@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Horizon - Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="https://i.pinimg.com/236x/d9/a8/d9/d9a8d9bbd5227a4abd1c5d4e250e1ef6.jpg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-wrapper">
+            <div class="logo-section">
+                <i class="fas fa-map-marker-alt logo-icon"></i>
+                <h1 class="logo-title">Trip Horizon</h1>
+            </div>
+            <nav class="header-nav">
+                <a href="homepage.html">Home</a>
+                <a href="destinationS.html">Destinations</a>
+                <a href="booking.html">Book With Us</a>
+                <a href="contact.html" class="active">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="contact-section">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">We’d love to hear from you! Let us help plan your next adventure in Kenya.</p>
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-field">
+                            <label for="username">Full Name:</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="username" name="username" placeholder="Enter your full name">
+                            </div>
+                            <div class="error" id="userError"></div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="phone">Phone Number:</label>
+                            <div class="phone-input">
+                                <select id="country-code">
+                                    <option value="+254">+254 (Kenya)</option>
+                                    <option value="+255">+255 (Tanzania)</option>
+                                    <option value="+256">+256 (Uganda)</option>
+                                    <option value="+257">+257 (Burundi)</option>
+                                    <option value="+250">+250 (Rwanda)</option>
+                                    <option value="+211">+211 (South Sudan)</option>
+                                </select>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="text" id="phone" name="phone" placeholder="Enter 9-digit Phone Number" required>
+                                </div>
+                            </div>
+                            <div class="error" id="phoneError"></div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="dob">Date of Birth:</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-calendar-alt"></i>
+                                <input type="date" id="dob" name="dob" required>
+                            </div>
+                            <div class="error" id="dobError"></div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="email">Email:</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" name="email" placeholder="Enter your email">
+                            </div>
+                            <div class="error" id="emailError"></div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="message">Message:</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-comment"></i>
+                                <textarea id="message" name="message" placeholder="Type your message here" rows="4"></textarea>
+                            </div>
+                            <div class="error" id="messageError"></div>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3>Contact Details</h3>
+                    <p><i class="fas fa-phone-alt"></i> (+254) 798-052-554</p>
+                    <p><i class="fas fa-envelope"></i> support@triphorizon.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-wrapper">
+            <div class="footer-info">
+                <h4>Trip Horizon</h4>
+                <p>Explore the beauty of Kenya with us!</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="homepage.html">Home</a>
+                <a href="destinations.html">Destinations</a>
+                <a href="booking.html">Book With Us</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p>Email: support@triphorizon.com</p>
+                <p>Phone: (+254) 798-052-554</p>
+            </div>
+        </div>
+        <p class="footer-copyright">© 2025 Trip Horizon. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const username = document.getElementById("username");
+            const phone = document.getElementById("phone");
+            const dob = document.getElementById("dob");
+            const email = document.getElementById("email");
+            const message = document.getElementById("message");
+            
+            const userError = document.getElementById("userError");
+            const phoneError = document.getElementById("phoneError");
+            const dobError = document.getElementById("dobError");
+            const emailError = document.getElementById("emailError");
+            const messageError = document.getElementById("messageError");
+
+            function validateName() {
+                if (!/^[a-zA-Z ]+$/.test(username.value.trim())) {
+                    userError.textContent = "Name should only contain alphabets.";
+                    return false;
+                }
+                userError.textContent = "";
+                return true;
+            }
+
+            function validatePhone() {
+                if (!/^[0-9]{9}$/.test(phone.value.trim())) {
+                    phoneError.textContent = "Enter a valid 9-digit phone number.";
+                    return false;
+                }
+                phoneError.textContent = "";
+                return true;
+            }
+
+            function validateDob() {
+                const birthDate = new Date(dob.value);
+                const today = new Date();
+                const age = today.getFullYear() - birthDate.getFullYear();
+                if (!dob.value || age < 16 || (age === 16 && today < new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate()))) {
+                    dobError.textContent = "You must be at least 16 years old.";
+                    return false;
+                }
+                dobError.textContent = "";
+                return true;
+            }
+
+            function validateEmail() {
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+                    emailError.textContent = "Enter a valid email address.";
+                    return false;
+                }
+                emailError.textContent = "";
+                return true;
+            }
+
+            function validateMessage() {
+                if (message.value.trim().length < 10) {
+                    messageError.textContent = "Message should be at least 10 characters long.";
+                    return false;
+                }
+                messageError.textContent = "";
+                return true;
+            }
+
+            username.addEventListener("input", validateName);
+            phone.addEventListener("input", validatePhone);
+            dob.addEventListener("change", validateDob);
+            email.addEventListener("input", validateEmail);
+            message.addEventListener("input", validateMessage);
+
+            document.getElementById("contactForm").addEventListener("submit", function (event) {
+                if (!(validateName() && validatePhone() && validateDob() && validateEmail() && validateMessage())) {
+                    event.preventDefault();
+                } else {
+                    alert("Form submitted successfully!");
+                    this.reset();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

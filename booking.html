@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book with Us - Trip Horizon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="booking.css">
+    <link rel="icon" href="https://i.pinimg.com/236x/d9/a8/d9/d9a8d9bbd5227a4abd1c5d4e250e1ef6.jpg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-wrapper">
+            <div class="logo-section">
+                <i class="fas fa-map-marker-alt logo-icon"></i>
+                <h1 class="logo-title">Trip Horizon</h1>
+            </div>
+            <nav class="header-nav">
+                <a href="homepage.html">Home</a>
+                <a href="destination.html">Destinations</a>
+                <a href="booking.html" class="active">Book With Us</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Booking Section -->
+        <section class="booking-section">
+            <h2 class="section-title">Book Your Adventure!</h2>
+            <p class="section-subtitle">Fill out the form below to start your Kenyan journey.</p>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-field">
+                    <label for="names">Name:</label>
+                    <input type="text" id="names" name="names" placeholder="Enter full name" required>
+                    <div id="userError" class="error-message"></div>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email" required>
+                    <div id="emailError" class="error-message"></div>
+                </div>
+
+                <div class="form-field">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" placeholder="Enter your age" min="1" required>
+                    <div id="ageError" class="error-message"></div>
+                </div>
+
+                <div class="form-field">
+                    <label for="sex">Sex:</label>
+                    <select id="sex" name="sex" required>
+                        <option value="">-- Select Sex --</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="wildlife-destination">Wildlife Destination:</label>
+                    <select id="wildlife-destination" name="wildlife-destination">
+                        <option value="">-- Choose Wildlife Destination --</option>
+                        <option value="Aberdare National Park">Aberdare National Park</option>
+                        <option value="Hell's Gate National Park">Hell's Gate National Park</option>
+                        <option value="Shimba Hills National Reserve">Shimba Hills National Reserve</option>
+                        <option value="Buffalo Springs National Reserve">Buffalo Springs National Reserve</option>
+                        <option value="Samburu National Reserve">Samburu National Reserve</option>
+                        <option value="Lake Nakuru National Park">Lake Nakuru National Park</option>
+                        <option value="Marsabit National Park">Marsabit National Park</option>
+                        <option value="Ol Pejeta Conservancy">Ol Pejeta Conservancy</option>
+                        <option value="Salt Lick Safari Lodge">Salt Lick Safari Lodge</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="beach-destination">Beach Resort:</label>
+                    <select id="beach-destination" name="beach-destination">
+                        <option value="">-- Choose Beach Resort --</option>
+                        <option value="Sarova Whitesands Beach Resort & Spa">Sarova Whitesands Beach Resort & Spa</option>
+                        <option value="Diani Reef Beach Resort & Spa">Diani Reef Beach Resort & Spa</option>
+                        <option value="Voyager Beach Resort">Voyager Beach Resort</option>
+                        <option value="Turtle Bay Beach Club">Turtle Bay Beach Club</option>
+                        <option value="Leopard Beach Resort & Spa">Leopard Beach Resort & Spa</option>
+                        <option value="Vipingo Beach Resort">Vipingo Beach Resort</option>
+                        <option value="North Coast Beach Hotel">North Coast Beach Hotel</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="museum-destination">Museum Destination:</label>
+                    <select id="museum-destination" name="museum-destination">
+                        <option value="">-- Choose Museum Destination --</option>
+                        <option value="Nairobi National Museum">Nairobi National Museum</option>
+                        <option value="Gede Ruins">Gede Ruins</option>
+                        <option value="Fort Jesus">Fort Jesus</option>
+                        <option value="Karen Blixen">Karen Blixen</option>
+                        <option value="Nairobi Railway Museum">Nairobi Railway Museum</option>
+                        <option value="Museum of Illusions">Museum of Illusions</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="paymentMode">Mode of Payment:</label>
+                    <select id="paymentMode" name="paymentMode" required>
+                        <option value="">-- Choose Mode of Payment --</option>
+                        <option value="Debit">Debit</option>
+                        <option value="Credit">Credit</option>
+                    </select>
+                </div>
+
+                <input type="submit" value="Book Now" class="btn-submit">
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-wrapper">
+            <div class="footer-info">
+                <h4>Trip Horizon</h4>
+                <p>Explore the beauty of Kenya with us!</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="homepage.html">Home</a>
+                <a href="destinations.html">Destinations</a>
+                <a href="booking.html">Book With Us</a>
+                <a href="contactus.html">Contact Us</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p>Email: support@triphorizon.com</p>
+                <p>Phone: (+254) 798-052-554</p>
+            </div>
+        </div>
+        <p class="footer-copyright">© 2025 Trip Horizon. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Confirmation Message -->
+    <script>
+    // Access elements
+    const nameInput = document.getElementById('names');
+    const emailInput = document.getElementById('email');
+    const ageInput = document.getElementById('age');
+    const wildlifeDestination = document.getElementById('wildlifeDestination');
+    const beachDestination = document.getElementById('beachDestination');
+    const museumDestination = document.getElementById('museumDestination');
+    const paymentMode = document.getElementById('paymentMode');
+
+    const nameError = document.getElementById('userError');
+    const emailError = document.getElementById('emailError');
+    const ageError = document.getElementById('ageError');
+    const destinationError = document.getElementById('destinationError');
+
+    // Validation functions
+    function checkName() {
+        const nameValue = nameInput.value.trim();
+        if (!/^[a-zA-Z\s]+$/.test(nameValue)) {
+            nameError.textContent = 'Name should only contain alphabets and spaces.';
+            return false;
+        }
+        nameError.textContent = '';
+        return true;
+    }
+
+    function checkEmail() {
+        const emailValue = emailInput.value.trim();
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
+            emailError.textContent = 'Please enter a valid email address.';
+            return false;
+        }
+        emailError.textContent = '';
+        return true;
+    }
+
+    function checkAge() {
+        const ageValue = parseInt(ageInput.value.trim());
+        if (isNaN(ageValue) || ageValue < 18) {
+            ageError.textContent = 'Min age must be 18 years.';
+            return false;
+        }
+        ageError.textContent = '';
+        return true;
+    }
+
+    function checkDestination() {
+        if (!wildlifeDestination.value && !beachDestination.value && !museumDestination.value) {
+            destinationError.textContent = 'Please select at least one destination.';
+            return false;
+        }
+        destinationError.textContent = '';
+        return true;
+    }
+
+    function checkPayment() {
+        if (!paymentMode.value) {
+            destinationError.textContent = 'Please select a payment method.';
+            return false;
+        }
+        destinationError.textContent = '';
+        return true;
+    }
+
+    // Event listeners for real-time validation
+    nameInput.addEventListener('input', checkName);
+    emailInput.addEventListener('input', checkEmail);
+    ageInput.addEventListener('input', checkAge);
+    wildlifeDestination.addEventListener('change', checkDestination);
+    beachDestination.addEventListener('change', checkDestination);
+    museumDestination.addEventListener('change', checkDestination);
+    paymentMode.addEventListener('change', checkPayment);
+
+    // Form submission handling
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+        if (!(checkName() && checkEmail() && checkAge() && checkDestination() && checkPayment())) {
+            event.preventDefault();
+        } else {
+            alert('Successfully booked with Trip Horizon!');
+            bookingForm.reset();
+        }
+    });
+</script>
+
+    
+</body>
+</html>
